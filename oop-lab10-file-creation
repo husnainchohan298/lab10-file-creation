@@ -1,0 +1,56 @@
+
+package lab10;
+
+import java.io.*;
+import java.util.*;
+public class Lab10 {
+
+    
+    public static void main(String[] args) throws IOException {
+        
+        
+        File myFile = new File("Hello.txt");
+        
+        boolean flag = myFile.exists();
+        
+        if ( flag == true)
+        {
+            System.out.println("Already Created");
+        }
+        else {
+            myFile.createNewFile();
+            System.out.println("New file created successfully ");
+            
+        }
+        
+        
+        
+         //Writing a file
+        PrintWriter p = new PrintWriter(myFile);
+        p.println("hi amerixcccaaaaaaaaaaaaaaa");
+        p.println("hi Pakistannnnnnnnnnnnnnnnnnnnnnnn");
+        p.close();
+       
+        
+        
+        //Reading a file 
+        Scanner scan = new Scanner(myFile); 
+        while(scan.hasNext())
+        {
+            String str = scan.nextLine();
+            System.out.println(str);
+        }
+        
+    }
+    
+}
+
+
+
+/*
+aik file banani hy
+menu banana hy 
+user ko bolo R for read
+user enter w for write 
+and enter for exit
+*/
